@@ -1,15 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
-import Loading from '../../components/app/loading/Loading';
+import Loading from '../../components/loading/Loading';
+import Request from '../../components/request/Request';
 
 export default function animals() {
-  const [loading, setLoading] = useState(true);
+  // currently false, but will update later
+  const [loading, setLoading] = useState(false);
   
   if(loading) return <Loading />;
 
   return (
-    <div>
-        Hello from animals component
-    </div>
+    <>
+      <Request />
+    </>
   );
 }

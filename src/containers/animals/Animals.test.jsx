@@ -5,7 +5,7 @@ import Animals from './Animals';
 describe('Animals component', () => {
   afterEach(() => cleanup());
 
-  it('renders Animals', () => {
+  it('renders Animals form', () => {
     render(<Animals />);
 
     screen.findByAltText('alt');
