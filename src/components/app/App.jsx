@@ -1,5 +1,10 @@
 import React from 'react';
+import Animals from '../../containers/animals/Animals';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+      <Animals />
+    </>
+  );
 }
