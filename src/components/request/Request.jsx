@@ -72,13 +72,46 @@ function Request({ onSubmit, onChange, name, type, characteristic, method, id })
             onChange={onChange} />
         </div>
 
-        {/* <input 
-          id="put"
-          type="radio" 
-          name="method" 
-          value="put"
-          onChange={onChange} />
-        <label htmlFor="put">PUT</label> */}
+        <div>
+          <input 
+            id="put"
+            type="radio" 
+            name="method" 
+            value="put"
+            onChange={onChange} />
+          <label htmlFor="put">Update Animal by Id</label>
+
+          <input 
+            type="text" 
+            placeholder="Enter ID of Animal" 
+            name="id"
+            value={id}
+            onChange={onChange} />
+            
+          <br />
+          <input 
+            type="text" 
+            placeholder="Update name" 
+            name="name"
+            value={name}
+            onChange={onChange} />
+  
+          <input 
+            type="text" 
+            placeholder="Update type" 
+            name="type"
+            value={type}
+            onChange={onChange} />
+  
+          <input 
+            type="text" 
+            placeholder="Update characteristic" 
+            name="characteristic"
+            value={characteristic}
+            onChange={onChange} />
+
+        </div>
+        
         <div>
           <input 
             id="delete"
