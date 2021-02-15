@@ -8,7 +8,7 @@ describe('Animals component', () => {
   it('renders Animals form', () => {
     render(<Animals />);
 
-    screen.findByAltText('alt');
+    // screen.findByAltText('alt');
 
   });
 });
