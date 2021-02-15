@@ -74,6 +74,25 @@ exports[`Request component renders Request 1`] = `
         value=""
       />
     </div>
+    <div>
+      <input
+        id="delete"
+        name="method"
+        type="radio"
+        value="delete"
+      />
+      <label
+        for="delete"
+      >
+        Delete Animal by Id
+      </label>
+      <input
+        name="id"
+        placeholder="Enter ID of Animal"
+        type="text"
+        value=""
+      />
+    </div>
     <button>
       Submit
     </button>

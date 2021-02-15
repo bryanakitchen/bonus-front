@@ -79,15 +79,23 @@ function Request({ onSubmit, onChange, name, type, characteristic, method, id })
           value="put"
           onChange={onChange} />
         <label htmlFor="put">PUT</label> */}
+        <div>
+          <input 
+            id="delete"
+            type="radio" 
+            name="method" 
+            value="delete"
+            checked={method === 'delete'}
+            onChange={onChange} />
+          <label htmlFor="delete">Delete Animal by Id</label>
 
-        {/* <input 
-          id="delete"
-          type="radio" 
-          name="method" 
-          value="delete"
-          checked={method === 'delete'}
-          onChange={onChange} />
-        <label htmlFor="delete">DELETE</label> */}
+          <input 
+            type="text" 
+            placeholder="Enter ID of Animal" 
+            name="id"
+            value={id}
+            onChange={onChange} />
+        </div>
   
         <button>Submit</button>
   
