@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import Request from '../../components/request/Request';
 import Response from '../../components/response/Response';
-import { postAnimal, getAnimals, findAnimalById, deleteAnimal } from '../../services/fetchServer';
+import { postAnimal, getAnimals, findAnimalById, deleteAnimal, updateAnimal } from '../../services/fetchServer';
 
 export default class Animals extends Component {
   state = {
@@ -16,13 +16,12 @@ export default class Animals extends Component {
 
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
-    // console.log(target.value);
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { name, type, characteristic, method, response, id } = this.state;
-    // console.log(method);
+    const { name, type, characteristic, method, id } = this.state;
+
     if(method === 'post') {
       postAnimal(name, type, characteristic)
         .then(res => this.setState({ 
@@ -38,8 +37,9 @@ export default class Animals extends Component {
       findAnimalById(id).then(response => this.setState({ response }));
     } else if(method === 'delete') {
       deleteAnimal(id).then(response => this.setState({ response }));
+    } else if(method === 'put') {
+      updateAnimal(id, name, type, characteristic).then(response => this.setState({ response }));
     }
-    // console.log(response);
   }
 
   render() {

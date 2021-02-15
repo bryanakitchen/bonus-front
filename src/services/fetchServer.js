@@ -29,3 +29,14 @@ export const deleteAnimal = (id) => {
   })
     .then(res => res.json());
 };
+
+export const updateAnimal = (id, name, type, characteristic) => {
+  const data = { name, type, characteristic };
+      
+  return fetch(`${URL}/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify(data),
+    headers: { 'Content-Type': 'application/json' }
+  }).then(res => res.json());
+};
+  
