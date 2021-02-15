@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Request component renders Request 1`] = `
+<DocumentFragment>
+  <form>
+    <h2>
+      Insert an Animal
+    </h2>
+    <input
+      name="name"
+      placeholder="Enter name"
+      type="text"
+      value="Tiger"
+    />
+    <input
+      name="type"
+      placeholder="Enter type"
+      type="text"
+      value="Mammal"
+    />
+    <input
+      name="characteristic"
+      placeholder="Enter characteristic"
+      type="text"
+      value="stripes"
+    />
+    <button>
+      Submit
+    </button>
+  </form>
+</DocumentFragment>
+`;

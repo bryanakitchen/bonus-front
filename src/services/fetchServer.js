@@ -9,7 +9,6 @@ export const postAnimal = (name, type, characteristic) => {
     method: 'POST',
     body: JSON.stringify(data),
     headers: { 'Content-Type': 'application/json' }
-  }).then(res => res.json())
-    .then(json => console.log(json));
+  }).then(res => res.json());
 };
 

@@ -1,5 +1,6 @@
+/* eslint-disable max-len */
 import React from 'react';
-import { render, cleanup, screen } from '@testing-library/react';
+import { render, cleanup, fireEvent, waitFor, screen } from '@testing-library/react';
 import Animals from './Animals';
 
 describe('Animals component', () => {
@@ -8,7 +9,17 @@ describe('Animals component', () => {
   it('renders Animals form', () => {
     render(<Animals />);
 
-    screen.findByAltText('alt');
+    const nameInput = screen.getByPlaceholderText('Enter name');
+
+    fireEvent.change(nameInput, {
+      target: {
+        value: 'Lion'
+      }
+    });
+
+    return waitFor(() => {
+      expect(screen.getByTestId('response')).not.toBeEmptyDOMElement();
+    });
 
   });
 });
