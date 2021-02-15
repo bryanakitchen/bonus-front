@@ -21,3 +21,22 @@ export const findAnimalById = (id) => {
   return fetch(`${URL}/${id}`)
     .then(res => res.json());
 };
+
+export const deleteAnimal = (id) => {
+  return fetch(`${URL}/${id}`, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' }    
+  }).then(res => res.json());
+};
+
+export const updateAnimal = (id, name, type, characteristic) => {
+  const data = { name, type, characteristic };
+//   console.log(id, name, type, characteristic);
+
+  return fetch(`${URL}/${id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(res => res.json());
+};
+  
