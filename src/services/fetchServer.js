@@ -12,3 +12,7 @@ export const postAnimal = (name, type, characteristic) => {
   }).then(res => res.json());
 };
 
+export const getAnimals = () => {
+  return fetch(`${URL}`, { method: 'GET' })
+    .then(res => res.json());
+};
