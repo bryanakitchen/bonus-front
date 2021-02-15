@@ -2,71 +2,78 @@
 
 exports[`Request component renders Request 1`] = `
 <DocumentFragment>
-  <form>
-    <h2>
-      Insert an Animal
-    </h2>
-    <input
-      name="name"
-      placeholder="Enter name"
-      type="text"
-      value="Tiger"
-    />
-    <input
-      name="type"
-      placeholder="Enter type"
-      type="text"
-      value="Mammal"
-    />
-    <input
-      name="characteristic"
-      placeholder="Enter characteristic"
-      type="text"
-      value="stripes"
-    />
-    <br />
-    <input
-      id="post"
-      name="method"
-      type="radio"
-      value="post"
-    />
-    <label
-      for="post"
-    >
-      Add an Animal
-    </label>
-    <br />
-    <input
-      id="get"
-      name="method"
-      type="radio"
-      value="get"
-    />
-    <label
-      for="get"
-    >
-      Get all Animals
-    </label>
-    <br />
-    <input
-      name="id"
-      placeholder="Enter ID of Animal"
-      type="text"
-      value=""
-    />
-    <input
-      id="find"
-      name="method"
-      type="radio"
-      value="find"
-    />
-    <label
-      for="find"
-    >
-      Find Animal by Id
-    </label>
-    <br />
+  <form
+    class="Request"
+  >
+    <h1>
+      Animal Form
+    </h1>
+    <h3>
+      Please select one
+    </h3>
+    <div>
+      <input
+        id="post"
+        name="method"
+        type="radio"
+        value="post"
+      />
+      <label
+        for="post"
+      >
+        Add an Animal
+      </label>
+      <input
+        name="name"
+        placeholder="Enter name"
+        type="text"
+        value="Tiger"
+      />
+      <input
+        name="type"
+        placeholder="Enter type"
+        type="text"
+        value="Mammal"
+      />
+      <input
+        name="characteristic"
+        placeholder="Enter characteristic"
+        type="text"
+        value="stripes"
+      />
+    </div>
+    <div>
+      <input
+        id="get"
+        name="method"
+        type="radio"
+        value="get"
+      />
+      <label
+        for="get"
+      >
+        Get all Animals
+      </label>
+    </div>
+    <div>
+      <input
+        id="find"
+        name="method"
+        type="radio"
+        value="find"
+      />
+      <label
+        for="find"
+      >
+        Find Animal by Id
+      </label>
+      <input
+        name="id"
+        placeholder="Enter ID of Animal"
+        type="text"
+        value=""
+      />
+    </div>
     <button>
       Submit
     </button>
