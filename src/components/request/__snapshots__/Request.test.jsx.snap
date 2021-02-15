@@ -24,6 +24,30 @@ exports[`Request component renders Request 1`] = `
       type="text"
       value="stripes"
     />
+    <br />
+    <input
+      id="get"
+      name="method"
+      type="radio"
+      value="get"
+    />
+    <label
+      for="get"
+    >
+      Get all Animals
+    </label>
+    <input
+      id="post"
+      name="method"
+      type="radio"
+      value="post"
+    />
+    <label
+      for="post"
+    >
+      Add an Animal
+    </label>
+    <br />
     <button>
       Submit
     </button>

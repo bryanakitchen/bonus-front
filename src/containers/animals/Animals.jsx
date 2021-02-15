@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Request from '../../components/request/Request';
 import Response from '../../components/response/Response';
-import { getAnimals, postAnimal } from '../../services/fetchServer';
+import { postAnimal, getAnimals } from '../../services/fetchServer';
 
 export default class Animals extends Component {
   state = {
@@ -14,12 +14,13 @@ export default class Animals extends Component {
 
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
+    // console.log(target.value);
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { name, type, characteristic, method } = this.state;
-    // console.log(name, type, characteristic);
+    const { name, type, characteristic, method, response } = this.state;
+    // console.log(method);
     if(method === 'post') {
       postAnimal(name, type, characteristic)
         .then(res => this.setState({ 
@@ -27,11 +28,12 @@ export default class Animals extends Component {
           type: res.type,
           characteristic: res.characteristic,
           response: res
-        }));}
-    else if(method === 'get') {
-      getAnimals().then(response => this.setState(response));
+        }));
     }
-    
+    else if(method === 'get') {
+      getAnimals().then(response => this.setState({ response }));
+    }
+    console.log(response);
   }
 
   render() {

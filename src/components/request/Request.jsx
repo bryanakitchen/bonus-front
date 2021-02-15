@@ -78,7 +78,7 @@ Request.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   characteristic: PropTypes.string.isRequired,
-  method: PropTypes.string.isRequired
+  method: PropTypes.string
 };
 
 export default Request;

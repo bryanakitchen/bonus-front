@@ -13,6 +13,6 @@ export const postAnimal = (name, type, characteristic) => {
 };
 
 export const getAnimals = () => {
-  return fetch(`${URL}`, { method: 'GET' })
+  return fetch(`${URL}`)
     .then(res => res.json());
 };
