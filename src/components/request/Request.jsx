@@ -48,6 +48,15 @@ function Request({ onSubmit, onChange, name, type, characteristic, method }) {
         <label htmlFor="post">Add an Animal</label>
 
         {/* <input 
+          id="find"
+          type="radio" 
+          name="method" 
+          value="find"
+          checked={method === 'find'}
+          onChange={onChange} />
+        <label htmlFor="find">Find Animal by Id</label> */}
+
+        {/* <input 
           id="put"
           type="radio" 
           name="method" 

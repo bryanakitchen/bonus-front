@@ -16,3 +16,8 @@ export const getAnimals = () => {
   return fetch(`${URL}`)
     .then(res => res.json());
 };
+
+export const findAnimalById = (id) => {
+  return fetch(`${URL}/${id}`)
+    .then(res => res.json());
+};
