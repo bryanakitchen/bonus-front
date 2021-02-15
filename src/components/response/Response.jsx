@@ -11,7 +11,7 @@ function Response({ response }) {
 }
 
 Response.propTypes = {
-  response: PropTypes.object.isRequired
+  response: PropTypes.array.isRequired
 };
 
 export default Response;
