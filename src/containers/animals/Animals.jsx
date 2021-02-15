@@ -37,7 +37,7 @@ export default class Animals extends Component {
     } else if(method === 'find') {
       findAnimalById(id).then(response => this.setState({ response }));
     }
-    console.log(response);
+    // console.log(response);
   }
 
   render() {
