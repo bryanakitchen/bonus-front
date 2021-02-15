@@ -89,7 +89,6 @@ function Request({ onSubmit, onChange, name, type, characteristic, method, id })
           onChange={onChange} />
         <label htmlFor="delete">DELETE</label> */}
   
-        <br />
         <button>Submit</button>
   
       </form>
