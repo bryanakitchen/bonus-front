@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { Component } from 'react';
 import Request from '../../components/request/Request';
 import Response from '../../components/response/Response';
@@ -9,7 +10,8 @@ export default class Animals extends Component {
     type: '',
     characteristic: '',
     method: '',
-    response: {}
+    response: {},
+    id: ''
   };
 
   handleChange = ({ target }) => {
@@ -19,7 +21,7 @@ export default class Animals extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { name, type, characteristic, method, response } = this.state;
+    const { name, type, characteristic, method, response, id } = this.state;
     // console.log(method);
     if(method === 'post') {
       postAnimal(name, type, characteristic)
