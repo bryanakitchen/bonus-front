@@ -11,7 +11,10 @@ function Response({ response }) {
 }
 
 Response.propTypes = {
-  response: PropTypes.array.isRequired
+  response: PropTypes.oneOfType([
+    PropTypes.arrayOf,
+    PropTypes.object
+  ])
 };
 
 export default Response;

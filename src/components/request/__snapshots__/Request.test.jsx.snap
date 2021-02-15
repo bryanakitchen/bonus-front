@@ -26,6 +26,18 @@ exports[`Request component renders Request 1`] = `
     />
     <br />
     <input
+      id="post"
+      name="method"
+      type="radio"
+      value="post"
+    />
+    <label
+      for="post"
+    >
+      Add an Animal
+    </label>
+    <br />
+    <input
       id="get"
       name="method"
       type="radio"
@@ -36,16 +48,23 @@ exports[`Request component renders Request 1`] = `
     >
       Get all Animals
     </label>
+    <br />
     <input
-      id="post"
+      name="id"
+      placeholder="Enter ID of Animal"
+      type="text"
+      value=""
+    />
+    <input
+      id="find"
       name="method"
       type="radio"
-      value="post"
+      value="find"
     />
     <label
-      for="post"
+      for="find"
     >
-      Add an Animal
+      Find Animal by Id
     </label>
     <br />
     <button>

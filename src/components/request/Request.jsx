@@ -1,7 +1,8 @@
+/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Request({ onSubmit, onChange, name, type, characteristic, method }) {
+function Request({ onSubmit, onChange, name, type, characteristic, method, id }) {
 
   return (
     <>
@@ -27,6 +28,16 @@ function Request({ onSubmit, onChange, name, type, characteristic, method }) {
           name="characteristic"
           value={characteristic}
           onChange={onChange} />
+        
+        <br />
+        <input 
+          id="post"
+          type="radio" 
+          name="method" 
+          value="post"
+          checked={method === 'post'}
+          onChange={onChange} />
+        <label htmlFor="post">Add an Animal</label>
 
         <br />
         <input 
@@ -38,14 +49,22 @@ function Request({ onSubmit, onChange, name, type, characteristic, method }) {
           onChange={onChange} />
         <label htmlFor="get">Get all Animals</label>
 
+        <br />
         <input 
-          id="post"
+          type="text" 
+          placeholder="Enter ID of Animal" 
+          name="id"
+          value={id}
+          onChange={onChange} />
+        
+        <input 
+          id="find"
           type="radio" 
           name="method" 
-          value="post"
-          checked={method === 'post'}
+          value="find"
+          checked={method === 'find'}
           onChange={onChange} />
-        <label htmlFor="post">Add an Animal</label>
+        <label htmlFor="find">Find Animal by Id</label>
 
         {/* <input 
           id="put"
@@ -75,10 +94,11 @@ function Request({ onSubmit, onChange, name, type, characteristic, method }) {
 Request.propTypes = {
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
-  name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  characteristic: PropTypes.string.isRequired,
-  method: PropTypes.string
+  name: PropTypes.string,
+  type: PropTypes.string,
+  characteristic: PropTypes.string,
+  method: PropTypes.string,
+  id: PropTypes.string
 };
 
 export default Request;
