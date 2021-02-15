@@ -1,0 +1,16 @@
+.Request {
+    background: rgb(165, 184, 174);
+
+    div {
+        border: solid 1px black;
+        padding: 4px;
+        margin: 2px;
+        background: white;
+        border-radius: 5px;
+
+        input {
+            margin-left: 8px;
+        }
+    }
+    
+}

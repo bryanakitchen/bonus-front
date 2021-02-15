@@ -1,70 +1,76 @@
 /* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Request.css';
 
 function Request({ onSubmit, onChange, name, type, characteristic, method, id }) {
 
   return (
     <>
-      <form onSubmit={onSubmit} >
-        <h2>Insert an Animal</h2>
-        <input 
-          type="text" 
-          placeholder="Enter name" 
-          name="name"
-          value={name}
-          onChange={onChange} />
-  
-        <input 
-          type="text" 
-          placeholder="Enter type" 
-          name="type"
-          value={type}
-          onChange={onChange} />
-  
-        <input 
-          type="text" 
-          placeholder="Enter characteristic" 
-          name="characteristic"
-          value={characteristic}
-          onChange={onChange} />
-        
-        <br />
-        <input 
-          id="post"
-          type="radio" 
-          name="method" 
-          value="post"
-          checked={method === 'post'}
-          onChange={onChange} />
-        <label htmlFor="post">Add an Animal</label>
+      <form onSubmit={onSubmit} className={ styles.Request }>
+        <h1>Animal Form</h1>
 
-        <br />
-        <input 
-          id="get"
-          type="radio" 
-          name="method" 
-          value="get" 
-          checked={method === 'get'}
-          onChange={onChange} />
-        <label htmlFor="get">Get all Animals</label>
+        <h3>Please select one</h3>
+        <div>
+          <input 
+            id="post"
+            type="radio" 
+            name="method" 
+            value="post"
+            checked={method === 'post'}
+            onChange={onChange} />
+          <label htmlFor="post">Add an Animal</label>
 
-        <br />
-        <input 
-          type="text" 
-          placeholder="Enter ID of Animal" 
-          name="id"
-          value={id}
-          onChange={onChange} />
+          <input 
+            type="text" 
+            placeholder="Enter name" 
+            name="name"
+            value={name}
+            onChange={onChange} />
+  
+          <input 
+            type="text" 
+            placeholder="Enter type" 
+            name="type"
+            value={type}
+            onChange={onChange} />
+  
+          <input 
+            type="text" 
+            placeholder="Enter characteristic" 
+            name="characteristic"
+            value={characteristic}
+            onChange={onChange} />
+        </div>
+
+        <div>
+          <input 
+            id="get"
+            type="radio" 
+            name="method" 
+            value="get" 
+            checked={method === 'get'}
+            onChange={onChange} />
+          <label htmlFor="get">Get all Animals</label>
+        </div>
         
-        <input 
-          id="find"
-          type="radio" 
-          name="method" 
-          value="find"
-          checked={method === 'find'}
-          onChange={onChange} />
-        <label htmlFor="find">Find Animal by Id</label>
+        <div>
+          <input 
+            id="find"
+            type="radio" 
+            name="method" 
+            value="find"
+            checked={method === 'find'}
+            onChange={onChange} />
+          <label htmlFor="find">Find Animal by Id</label>
+
+          <input 
+            type="text" 
+            placeholder="Enter ID of Animal" 
+            name="id"
+            value={id}
+            onChange={onChange} />
+        </div>
 
         {/* <input 
           id="put"
