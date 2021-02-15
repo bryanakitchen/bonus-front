@@ -78,6 +78,7 @@ function Request({ onSubmit, onChange, name, type, characteristic, method, id })
             type="radio" 
             name="method" 
             value="put"
+            checked={method === 'put'}
             onChange={onChange} />
           <label htmlFor="put">Update Animal by Id</label>
 
@@ -87,7 +88,7 @@ function Request({ onSubmit, onChange, name, type, characteristic, method, id })
             name="id"
             value={id}
             onChange={onChange} />
-            
+
           <br />
           <input 
             type="text" 
@@ -109,7 +110,6 @@ function Request({ onSubmit, onChange, name, type, characteristic, method, id })
             name="characteristic"
             value={characteristic}
             onChange={onChange} />
-
         </div>
         
         <div>
