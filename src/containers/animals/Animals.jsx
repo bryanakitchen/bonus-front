@@ -8,6 +8,7 @@ export default class Animals extends Component {
     name: '',
     type: '',
     characteristic: '',
+    method: '',
     response: {}
   };
 
@@ -29,15 +30,17 @@ export default class Animals extends Component {
   }
 
   render() {
-    const { name, type, characteristic, response } = this.state;
+    const { name, type, characteristic, response, method } = this.state;
     return (
       <>
         <Request 
           name={name} 
           type={type} 
           characteristic={characteristic} 
+          method={method}
           onChange={this.handleChange}
-          onSubmit={this.handleSubmit} />
+          onSubmit={this.handleSubmit}
+           />
 
         <Response response={response} />
       </>
