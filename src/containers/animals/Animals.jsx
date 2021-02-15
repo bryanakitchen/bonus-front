@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import Request from '../../components/request/Request';
 import Response from '../../components/response/Response';
-import { postAnimal, getAnimals, findAnimalById } from '../../services/fetchServer';
+import { postAnimal, getAnimals, findAnimalById, deleteAnimal } from '../../services/fetchServer';
 
 export default class Animals extends Component {
   state = {
@@ -36,6 +36,8 @@ export default class Animals extends Component {
       getAnimals().then(response => this.setState({ response }));
     } else if(method === 'find') {
       findAnimalById(id).then(response => this.setState({ response }));
+    } else if(method === 'delete') {
+      deleteAnimal(id).then(response => this.setState({ response }));
     }
     // console.log(response);
   }
