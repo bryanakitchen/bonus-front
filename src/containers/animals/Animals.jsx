@@ -23,16 +23,18 @@ export default class Animals extends Component {
     const { name, type, characteristic, method, id } = this.state;
 
     if(method === 'post') {
-      postAnimal(name, type, characteristic)
-        .then(response => this.setState({ response }));
-    }
-    else if(method === 'get') {
+      postAnimal(name, type, characteristic).then(response => this.setState({ response }));
+    } 
+    if(method === 'get') {
       getAnimals().then(response => this.setState({ response }));
-    } else if(method === 'find') {
+    } 
+    if(method === 'find') {
       findAnimalById(id).then(response => this.setState({ response }));
-    } else if(method === 'delete') {
+    } 
+    if(method === 'delete') {
       deleteAnimal(id).then(response => this.setState({ response }));
-    } else if(method === 'put') {
+    } 
+    if(method === 'put') {
       updateAnimal(id, name, type, characteristic).then(response => this.setState({ response }));
     }
   }
