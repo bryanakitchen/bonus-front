@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
 const URL = 'https://secret-peak-24272.herokuapp.com/api/v1/animals';
 
@@ -31,7 +31,6 @@ export const deleteAnimal = (id) => {
 
 export const updateAnimal = (id, name, type, characteristic) => {
   const data = { name, type, characteristic };
-//   console.log(id, name, type, characteristic);
 
   return fetch(`${URL}/${id}`, {
     method: 'PUT',
@@ -39,4 +38,3 @@ export const updateAnimal = (id, name, type, characteristic) => {
     body: JSON.stringify(data)
   }).then(res => res.json());
 };
-  

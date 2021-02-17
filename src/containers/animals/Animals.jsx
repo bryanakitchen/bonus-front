@@ -24,12 +24,7 @@ export default class Animals extends Component {
 
     if(method === 'post') {
       postAnimal(name, type, characteristic)
-        .then(res => this.setState({ 
-          name: res.name,
-          type: res.type,
-          characteristic: res.characteristic,
-          response: res
-        }));
+        .then(response => this.setState({ response }));
     }
     else if(method === 'get') {
       getAnimals().then(response => this.setState({ response }));
